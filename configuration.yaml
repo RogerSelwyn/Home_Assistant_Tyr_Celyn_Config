@@ -1,4 +1,4 @@
-homeassistant:
+homeassistant: 
   customize: !include includes/customize.yaml
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
