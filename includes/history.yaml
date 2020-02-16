@@ -1,0 +1,25 @@
+use_include_order: true
+include:
+  domains:
+    - device_tracker
+  entities:
+    - binary_sensor.presence_all
+    - binary_sensor.internet
+    - person.clare_selwyn
+    - person.roger_selwyn
+    - person.rosie_parry
+    - sensor.sky_media_playing
+    - sun.sun
+    - switch.garage_it
+    - switch.workshop_camera
+    - weather.ty_r_celyn
+
+    - sensor.cpu_temperature
+    - sensor.memory_free
+    - sensor.processor_use
+    
+exclude:
+  entities:
+    - device_tracker.clares_iphone
+    - device_tracker.rogers_iphone
+    - device_tracker.rosies_phone

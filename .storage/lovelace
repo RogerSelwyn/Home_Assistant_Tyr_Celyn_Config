@@ -1,0 +1,232 @@
+{
+    "data": {
+        "config": {
+            "background": "var(--background-image)",
+            "custom_header": {
+                "background": "rgba(155, 155, 155, 0.25)",
+                "compact_mode": true,
+                "default_tab": "0"
+            },
+            "resources": [
+                {
+                    "type": "module",
+                    "url": "/community_plugin/mini-media-player/mini-media-player-bundle.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/custom-header/custom-header.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/weather-card/weather-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/lovelace-auto-entities/auto-entities.js"
+                }
+            ],
+            "title": "Ty'r Celyn",
+            "views": [
+                {
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.presence_all"
+                        },
+                        {
+                            "entity": "sun.sun"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entity": "weather.ty_r_celyn",
+                            "name": "TC",
+                            "type": "custom:weather-card"
+                        },
+                        {
+                            "artwork": "cover",
+                            "entity": "media_player.sky_q",
+                            "hide": {
+                                "power_state": false,
+                                "source": true,
+                                "volume": true
+                            },
+                            "icon": "mdi:blank",
+                            "name": "SkyQ",
+                            "shortcuts": {
+                                "buttons": [
+                                    {
+                                        "icon": "mdi:chevron-up",
+                                        "id": "CHup",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": "mdi:chevron-down",
+                                        "id": "CHdn",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": "mdi:record-rec",
+                                        "id": "Record",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": null,
+                                        "id": "Sky",
+                                        "name": "Sky",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": null,
+                                        "id": "TVGuide",
+                                        "name": "Guide",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": "mdi:home-outline",
+                                        "id": "Home",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": "mdi:menu-open",
+                                        "id": "Sidebar",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": "mdi:keyboard-return",
+                                        "id": "Dismiss",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": "mdi:information-variant",
+                                        "id": "I",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": "mdi:arrow-right-thick",
+                                        "id": "Right",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": "mdi:arrow-left-thick",
+                                        "id": "Left",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": "mdi:arrow-up-thick",
+                                        "id": "Up",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": "mdi:arrow-down-thick",
+                                        "id": "Down",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": null,
+                                        "id": "Select",
+                                        "name": "Select",
+                                        "type": "source"
+                                    },
+                                    {
+                                        "icon": null,
+                                        "name": null
+                                    },
+                                    {
+                                        "icon": null
+                                    },
+                                    {
+                                        "icon": null
+                                    },
+                                    {
+                                        "icon": null
+                                    }
+                                ],
+                                "columns": 6,
+                                "hide_when_off": true
+                            },
+                            "type": "custom:mini-media-player"
+                        }
+                    ],
+                    "icon": "mdi:home-outline",
+                    "path": "default_view",
+                    "title": "Ty'r Celyn"
+                },
+                {
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.updater"
+                        },
+                        {
+                            "entity": "sensor.hacs"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.processor_use"
+                                },
+                                {
+                                    "entity": "sensor.memory_free"
+                                },
+                                {
+                                    "entity": "sensor.cpu_temperature"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Pi",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.workshop_camera"
+                                },
+                                {
+                                    "entity": "switch.garage_it"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Plugs",
+                            "type": "entities"
+                        },
+                        {
+                            "card": {
+                                "show_header_toggle": false,
+                                "title": "Ty'r Celyn Presence",
+                                "type": "entities"
+                            },
+                            "filter": {
+                                "exclude": [
+                                    {
+                                        "entity_id": "device_tracker.clares_iphone"
+                                    },
+                                    {
+                                        "entity_id": "device_tracker.rogers_iphone"
+                                    },
+                                    {
+                                        "entity_id": "device_tracker.rosies_phone"
+                                    },
+                                    {
+                                        "entity_id": "*_ipad"
+                                    }
+                                ],
+                                "include": [
+                                    {
+                                        "state": "home"
+                                    }
+                                ]
+                            },
+                            "type": "custom:auto-entities"
+                        }
+                    ],
+                    "icon": "mdi:information",
+                    "path": "info",
+                    "title": "Info"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

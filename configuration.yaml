@@ -1,0 +1,61 @@
+homeassistant:
+  customize: !include includes/customize.yaml
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+# default_config:
+automation: !include includes/automations.yaml
+#cloud: !include includes/cloud.yaml
+config:
+frontend:
+  themes: !include_dir_merge_named themes
+history: !include includes/history.yaml
+logbook: !include includes/logbook.yaml
+mobile_app:
+person:
+recorder: #!include includes/recorder.yaml
+script: !include includes/scripts.yaml
+ssdp:
+sun:
+system_health:
+system_log:
+  fire_event: true
+updater:
+zeroconf:
+
+# Non-default items added
+binary_sensor: !include includes/binarysensor.yaml
+device_tracker: !include includes/devicetracker.yaml
+group: !include includes/groups.yaml
+input_boolean: !include includes/inputboolean.yaml
+media_player: !include includes/mediaplayer.yaml
+notify: !include includes/notify.yaml
+scene: !include includes/scenes.yaml
+sensor: !include includes/sensor.yaml
+weather: !include includes/weather.yaml
+zone: !include includes/zones.yaml
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+http:
+  base_url: !secret base_url
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+  server_port: !secret server_port
+  ip_ban_enabled: true
+  login_attempts_threshold: 5
+  use_x_forwarded_for: true
+  trusted_proxies: !secret asus_host
+  
+# Text to speech
+tts:
+  - platform: google_translate
+
+logger:
+  default: warning
+  logs:
+    NodeRed: debug
+
+tplink:
+  discovery: false
+  switch:
+    - host: !secret tplink_switch_1
+    - host: !secret tplink_switch_2

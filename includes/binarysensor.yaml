@@ -1,0 +1,11 @@
+- platform: ping
+  name: internet
+  host: 8.8.8.8
+  scan_interval: 10
+
+- platform: template
+  sensors:
+    presence_all:
+      friendly_name: "Presence - All"
+      device_class: presence
+      value_template: "{{ is_state('input_boolean.presence_all', 'on') }}"

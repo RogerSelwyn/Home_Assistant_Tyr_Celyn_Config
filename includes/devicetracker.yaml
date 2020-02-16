@@ -1,0 +1,2 @@
+- platform: sky_hub
+  host: !secret skyhub_host
