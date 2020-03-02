@@ -23,14 +23,33 @@
                 {
                     "type": "module",
                     "url": "/community_plugin/lovelace-auto-entities/auto-entities.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/lovelace-card-mod/card-mod.js"
                 }
             ],
+            "swipe_nav": {
+                "animate": "swipe"
+            },
             "title": "Ty'r Celyn",
             "views": [
                 {
                     "badges": [
                         {
                             "entity": "binary_sensor.presence_all"
+                        },
+                        {
+                            "entity": "binary_sensor.booking",
+                            "style": {
+                                "ha-state-label-badge": {
+                                    "$": {
+                                        "ha-label-badge": {
+                                            "$": ".label-badge {\n  {% if is_state('binary_sensor.booking', 'on') %} \n    background-color: #008000 !important;\n    background-image: url(\"/local/icons/home.png\");\n  {% elif is_state('binary_sensor.booking', 'off') %} \n    background-color: #DC143C !important;\n    background-image: url(\"/local/icons/home-outline.png\");\n {% endif %} !important;\n}\n.value {display:none}\n"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "entity": "sun.sun"
@@ -209,6 +228,9 @@
                                     },
                                     {
                                         "entity_id": "*_ipad"
+                                    },
+                                    {
+                                        "entity_id": "*now_tv*"
                                     }
                                 ],
                                 "include": [
@@ -216,6 +238,10 @@
                                         "state": "home"
                                     }
                                 ]
+                            },
+                            "sort": {
+                                "ignore_case": true,
+                                "method": "entity_id"
                             },
                             "type": "custom:auto-entities"
                         }

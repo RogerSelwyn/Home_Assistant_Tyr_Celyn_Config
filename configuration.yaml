@@ -20,17 +20,19 @@ system_health:
 system_log:
   fire_event: true
 updater:
-zeroconf:
+#zeroconf:
 
 # Non-default items added
 binary_sensor: !include includes/binarysensor.yaml
 device_tracker: !include includes/devicetracker.yaml
 group: !include includes/groups.yaml
 input_boolean: !include includes/inputboolean.yaml
+input_number: !include includes/inputnumber.yaml
 media_player: !include includes/mediaplayer.yaml
 notify: !include includes/notify.yaml
 scene: !include includes/scenes.yaml
 sensor: !include includes/sensor.yaml
+shell_command: !include includes/shellcommand.yaml
 weather: !include includes/weather.yaml
 zone: !include includes/zones.yaml
 
@@ -43,7 +45,7 @@ http:
   ip_ban_enabled: true
   login_attempts_threshold: 5
   use_x_forwarded_for: true
-  trusted_proxies: !secret asus_host
+  trusted_proxies: !secret skyq_host
   
 # Text to speech
 tts:

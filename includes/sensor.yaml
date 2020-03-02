@@ -23,9 +23,11 @@
       friendly_name: "Media Series Title"
       value_template: "{{ state_attr('media_player.sky_q', 'media_series_title') }}"
     sky_media_playing:
-      friendly_name: "Sky Q Playing"
+      friendly_name: "Sky Q"
       value_template: >-
-        {% if state_attr('media_player.sky_q', 'media_series_title') == None %}
+        {% if state_attr('media_player.sky_q', 'media_channel') == None %}
+          Off
+        {% elif state_attr('media_player.sky_q', 'media_series_title') == None %}
           {{ state_attr('media_player.sky_q', 'media_channel') }}
         {% else %}
           {{ state_attr('media_player.sky_q', 'media_channel') }} - {{ state_attr('media_player.sky_q', 'media_series_title') }}
