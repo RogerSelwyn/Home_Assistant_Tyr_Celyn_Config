@@ -33,6 +33,7 @@ notify: !include includes/notify.yaml
 scene: !include includes/scenes.yaml
 sensor: !include includes/sensor.yaml
 shell_command: !include includes/shellcommand.yaml
+variable: !include includes/variable.yaml
 weather: !include includes/weather.yaml
 zone: !include includes/zones.yaml
 

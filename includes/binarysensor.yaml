@@ -6,7 +6,7 @@
 - platform: template
   sensors:
     presence_all:
-      friendly_name: "Presence - All"
+      friendly_name: "TC - Presence - All"
       device_class: presence
       value_template: "{{ is_state('input_boolean.presence_all', 'on') }}"
     booking:

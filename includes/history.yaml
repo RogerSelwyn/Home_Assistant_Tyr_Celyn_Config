@@ -13,8 +13,6 @@ include:
     - binary_sensor.workshop_cam
     - sensor.sky_media_playing
     - sun.sun
-    - switch.garage_it
-    - switch.workshop_camera
     - weather.ty_r_celyn
 
     - sensor.cpu_temperature
