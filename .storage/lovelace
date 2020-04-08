@@ -7,32 +7,6 @@
                 "compact_mode": true,
                 "default_tab": "0"
             },
-            "resources": [
-                {
-                    "type": "module",
-                    "url": "/community_plugin/mini-media-player/mini-media-player-bundle.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/custom-header/custom-header.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/weather-card/weather-card.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/lovelace-auto-entities/auto-entities.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/lovelace-card-mod/card-mod.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/Home-Assistant-Lovelace-HTML-Jinja2-Template-card/html-template-card.js"
-                }
-            ],
             "swipe_nav": {
                 "animate": "swipe"
             },
@@ -73,7 +47,6 @@
                                 "source": true,
                                 "volume": true
                             },
-                            "icon": "mdi:satellite-uplink",
                             "info": "scroll",
                             "name": "SkyQ",
                             "shortcuts": {

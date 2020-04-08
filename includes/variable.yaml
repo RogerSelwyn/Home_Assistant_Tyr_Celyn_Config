@@ -3,3 +3,4 @@ skyq_recordings:
   value: HTML
   attributes:
     content: None
+  restore: True

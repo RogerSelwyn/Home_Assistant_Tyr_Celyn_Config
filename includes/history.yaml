@@ -4,6 +4,7 @@ include:
     - device_tracker
   entities:
     - binary_sensor.presence_all
+    - binary_sensor.presence_cleaner
     - binary_sensor.booking
     - person.clare_selwyn
     - person.roger_selwyn
@@ -24,3 +25,4 @@ exclude:
     - device_tracker.clares_iphone
     - device_tracker.rogers_iphone
     - device_tracker.rosies_phone
+    - device_tracker.cleaner_1

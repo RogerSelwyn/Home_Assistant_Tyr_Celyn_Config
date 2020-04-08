@@ -9,7 +9,7 @@ config:
 frontend:
   themes: !include_dir_merge_named themes
 history: !include includes/history.yaml
-logbook: !include includes/logbook.yaml
+#logbook: !include includes/logbook.yaml
 mobile_app:
 person:
 recorder: #!include includes/recorder.yaml
