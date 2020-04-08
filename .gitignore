@@ -19,6 +19,7 @@ update.sh
 
 Reinclude files
 !.storage/lovelace
+!.storage/lovelace_resources
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml
