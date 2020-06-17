@@ -22,11 +22,6 @@
                 "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js"
             },
             {
-                "id": "546842a88b5247e7bba100a87ba2e102",
-                "type": "module",
-                "url": "/hacsfiles/lovelace-card-mod/card-mod.js"
-            },
-            {
                 "id": "e8a408f8c72a4a82896c21ad04be53c9",
                 "type": "module",
                 "url": "/hacsfiles/Home-Assistant-Lovelace-HTML-Jinja2-Template-card/html-template-card.js"

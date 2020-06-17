@@ -18,16 +18,7 @@
                             "entity": "binary_sensor.presence_all"
                         },
                         {
-                            "entity": "binary_sensor.booking",
-                            "style": {
-                                "ha-state-label-badge": {
-                                    "$": {
-                                        "ha-label-badge": {
-                                            "$": ".label-badge {\n  {% if is_state('binary_sensor.booking', 'on') %} \n    background-color: #008000 !important;\n    background-image: url(\"/local/icons/home.png\");\n  {% elif is_state('binary_sensor.booking', 'off') %} \n    background-color: #DC143C !important;\n    background-image: url(\"/local/icons/home-outline.png\");\n {% endif %} !important;\n}\n.value {display:none}\n"
-                                        }
-                                    }
-                                }
-                            }
+                            "entity": "sensor.bookings"
                         },
                         {
                             "entity": "sun.sun"
@@ -178,6 +169,15 @@
                             "show_header_toggle": false,
                             "title": "Pi",
                             "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sensor.connected_clients"
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "title": "Connected Clients",
+                            "type": "history-graph"
                         },
                         {
                             "entities": [
