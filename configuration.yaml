@@ -56,7 +56,8 @@ logger:
   default: warning
   logs:
     NodeRed: debug
-
+    # custom_components.sky_hub: debug
+    # pyskyqremote.skyq_hub: debug
 tplink:
   discovery: false
   switch:
