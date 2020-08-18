@@ -31,7 +31,7 @@
                             "type": "custom:weather-card"
                         },
                         {
-                            "artwork": "cover",
+                            "artwork": "material",
                             "entity": "media_player.sky_q",
                             "hide": {
                                 "power_state": false,
@@ -183,9 +183,6 @@
                             "entities": [
                                 {
                                     "entity": "switch.workshop_camera"
-                                },
-                                {
-                                    "entity": "switch.garage_it"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -201,7 +198,7 @@
                             "filter": {
                                 "exclude": [
                                     {
-                                        "entity_id": "device_tracker.clares_iphone"
+                                        "entity_id": "device_tracker.claresiphonepro"
                                     },
                                     {
                                         "entity_id": "device_tracker.rogers_iphone"
@@ -210,10 +207,25 @@
                                         "entity_id": "device_tracker.rosies_phone"
                                     },
                                     {
+                                        "entity_id": "device_tracker.cleaner_1"
+                                    },
+                                    {
+                                        "entity_id": "device_tracker.bluray"
+                                    },
+                                    {
+                                        "entity_id": "device_tracker.sky_uplink"
+                                    },
+                                    {
                                         "entity_id": "*_ipad"
                                     },
                                     {
                                         "entity_id": "*now_tv*"
+                                    },
+                                    {
+                                        "entity_id": "*chromecast*"
+                                    },
+                                    {
+                                        "entity_id": "*galaxy_tab*"
                                     }
                                 ],
                                 "include": [

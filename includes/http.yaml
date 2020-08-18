@@ -1,0 +1,10 @@
+# base_url: !secret base_url
+# ssl_certificate: /ssl/fullchain.pem
+# ssl_key: /ssl/privkey.pem
+server_port: !secret server_port
+ip_ban_enabled: true
+login_attempts_threshold: 5
+use_x_forwarded_for: true
+trusted_proxies: 
+  - !secret skyq_host
+  - 172.30.33.4

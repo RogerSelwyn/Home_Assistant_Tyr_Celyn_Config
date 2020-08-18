@@ -1,2 +1,7 @@
 - platform: sky_hub
   host: !secret skyhub_host
+  
+- platform: luci
+  host: !secret openwrt_host
+  username: !secret openwrt_username
+  password: !secret openwrt_password

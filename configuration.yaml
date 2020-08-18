@@ -12,7 +12,7 @@ history: !include includes/history.yaml
 #logbook: !include includes/logbook.yaml
 mobile_app:
 person:
-recorder: #!include includes/recorder.yaml
+recorder: !include includes/recorder.yaml
 script: !include includes/scripts.yaml
 ssdp:
 sun:
@@ -26,9 +26,10 @@ updater:
 binary_sensor: !include includes/binarysensor.yaml
 device_tracker: !include includes/devicetracker.yaml
 group: !include includes/groups.yaml
+http: !include includes/http.yaml
 input_boolean: !include includes/inputboolean.yaml
 input_number: !include includes/inputnumber.yaml
-media_player: !include includes/mediaplayer.yaml
+# media_player: !include includes/mediaplayer.yaml
 notify: !include includes/notify.yaml
 scene: !include includes/scenes.yaml
 sensor: !include includes/sensor.yaml
@@ -36,17 +37,6 @@ shell_command: !include includes/shellcommand.yaml
 variable: !include includes/variable.yaml
 weather: !include includes/weather.yaml
 zone: !include includes/zones.yaml
-
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-http:
-  base_url: !secret base_url
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
-  server_port: !secret server_port
-  ip_ban_enabled: true
-  login_attempts_threshold: 5
-  use_x_forwarded_for: true
-  trusted_proxies: !secret skyq_host
   
 # Text to speech
 tts:
@@ -58,6 +48,8 @@ logger:
     NodeRed: debug
     # custom_components.sky_hub: debug
     # pyskyqremote.skyq_hub: debug
+    custom_components.skyq: debug
+    pyskyqremote.skyq_remote: debug
 tplink:
   discovery: false
   switch:

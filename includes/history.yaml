@@ -10,9 +10,11 @@ include:
     - person.roger_selwyn
     - person.rosie_parry
     - binary_sensor.internet
+    - binary_sensor.sky_uplink
     - binary_sensor.garage_cam
     - binary_sensor.workshop_cam
     - sensor.sky_media_playing
+    - binary_sensor.bluray
     - sun.sun
     - weather.ty_r_celyn
 
@@ -23,7 +25,8 @@ include:
     
 exclude:
   entities:
-    - device_tracker.clares_iphone
+    - device_tracker.claresiphonepro
     - device_tracker.rogers_iphone
     - device_tracker.rosies_phone
-    - device_tracker.cleaner_1
+    - device_tracker.bluray
+    - device_tracker.sky_uplink
