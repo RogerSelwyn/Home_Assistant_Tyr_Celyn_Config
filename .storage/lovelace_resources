@@ -1,15 +1,12 @@
 {
+    "version": 1,
+    "key": "lovelace_resources",
     "data": {
         "items": [
             {
                 "id": "04fef14347c2425cbb2b23e9a07f310e",
                 "type": "module",
                 "url": "/hacsfiles/mini-media-player/mini-media-player-bundle.js"
-            },
-            {
-                "id": "b17d68abeac4439db0f2e308b091321e",
-                "type": "module",
-                "url": "/hacsfiles/custom-header/custom-header.js"
             },
             {
                 "id": "0e184b554f4342e0af6d7dffcadae456",
@@ -27,7 +24,5 @@
                 "url": "/hacsfiles/Home-Assistant-Lovelace-HTML-Jinja2-Template-card/html-template-card.js"
             }
         ]
-    },
-    "key": "lovelace_resources",
-    "version": 1
+    }
 }

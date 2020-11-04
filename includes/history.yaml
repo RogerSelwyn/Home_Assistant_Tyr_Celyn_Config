@@ -3,14 +3,15 @@ include:
   domains:
     - device_tracker
   entities:
+    - binary_sensor.utility_motion
     - binary_sensor.presence_all
-    - binary_sensor.presence_cleaner
+#    - binary_sensor.presence_cleaner
     - binary_sensor.booking
     - person.clare_selwyn
     - person.roger_selwyn
     - person.rosie_parry
     - binary_sensor.internet
-    - binary_sensor.sky_uplink
+#    - binary_sensor.sky_uplink
     - binary_sensor.garage_cam
     - binary_sensor.workshop_cam
     - sensor.sky_media_playing
@@ -27,6 +28,7 @@ exclude:
   entities:
     - device_tracker.claresiphonepro
     - device_tracker.rogers_iphone
+    - device_tracker.rogers_iphone_2
     - device_tracker.rosies_phone
     - device_tracker.bluray
     - device_tracker.sky_uplink

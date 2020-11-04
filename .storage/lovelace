@@ -1,12 +1,9 @@
 {
+    "version": 1,
+    "key": "lovelace",
     "data": {
         "config": {
             "background": "var(--background-image)",
-            "custom_header": {
-                "background": "rgba(155, 155, 155, 0.25)",
-                "compact_mode": true,
-                "default_tab": "0"
-            },
             "swipe_nav": {
                 "animate": "swipe"
             },
@@ -190,55 +187,65 @@
                             "type": "entities"
                         },
                         {
-                            "card": {
-                                "show_header_toggle": false,
-                                "title": "Ty'r Celyn Presence",
-                                "type": "entities"
-                            },
-                            "filter": {
-                                "exclude": [
-                                    {
-                                        "entity_id": "device_tracker.claresiphonepro"
+                            "cards": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "binary_sensor.presence_all"
+                                        },
+                                        {
+                                            "entity": "timer.presence"
+                                        }
+                                    ],
+                                    "type": "entities"
+                                },
+                                {
+                                    "card": {
+                                        "show_header_toggle": false,
+                                        "type": "entities"
                                     },
-                                    {
-                                        "entity_id": "device_tracker.rogers_iphone"
+                                    "filter": {
+                                        "exclude": [
+                                            {
+                                                "entity_id": "device_tracker.bluray"
+                                            },
+                                            {
+                                                "entity_id": "device_tracker.sky_uplink"
+                                            },
+                                            {
+                                                "entity_id": "*_ipad"
+                                            },
+                                            {
+                                                "entity_id": "*now_tv*"
+                                            },
+                                            {
+                                                "entity_id": "*chromecast*"
+                                            },
+                                            {
+                                                "entity_id": "*galaxy_tab*"
+                                            },
+                                            {
+                                                "entity_id": "*amazon*"
+                                            },
+                                            {
+                                                "entity_id": "*kindle*"
+                                            }
+                                        ],
+                                        "include": [
+                                            {
+                                                "state": "home"
+                                            }
+                                        ]
                                     },
-                                    {
-                                        "entity_id": "device_tracker.rosies_phone"
+                                    "sort": {
+                                        "ignore_case": true,
+                                        "method": "entity_id"
                                     },
-                                    {
-                                        "entity_id": "device_tracker.cleaner_1"
-                                    },
-                                    {
-                                        "entity_id": "device_tracker.bluray"
-                                    },
-                                    {
-                                        "entity_id": "device_tracker.sky_uplink"
-                                    },
-                                    {
-                                        "entity_id": "*_ipad"
-                                    },
-                                    {
-                                        "entity_id": "*now_tv*"
-                                    },
-                                    {
-                                        "entity_id": "*chromecast*"
-                                    },
-                                    {
-                                        "entity_id": "*galaxy_tab*"
-                                    }
-                                ],
-                                "include": [
-                                    {
-                                        "state": "home"
-                                    }
-                                ]
-                            },
-                            "sort": {
-                                "ignore_case": true,
-                                "method": "entity_id"
-                            },
-                            "type": "custom:auto-entities"
+                                    "type": "custom:auto-entities"
+                                }
+                            ],
+                            "title": "Ty'r Celyn Presence",
+                            "type": "vertical-stack"
                         }
                     ],
                     "icon": "mdi:information",
@@ -247,7 +254,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace",
-    "version": 1
+    }
 }

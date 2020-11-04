@@ -6,3 +6,4 @@ remote_ha:
     - input_number.bookings_today
     - input_number.bookings_tomorrow
     - input_number.bookings_total
+    - binary_sensor.utility_motion
