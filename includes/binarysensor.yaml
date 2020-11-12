@@ -37,9 +37,9 @@
 
 - platform: dlink_hnap
   name: Utility Motion
-  host: 192.168.0.94
+  host: !secret dlink_host
   type: motion
-  username: Admin
-  password: 263142
+  username: !secret dlink_username
+  password: !secret dlink_password
   timeout: 35
 
