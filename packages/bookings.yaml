@@ -42,4 +42,4 @@ sensor:
           {% endif %}
 
 shell_command:
-  clean_knowndevices: /bin/bash /config/clean_knowndevices.sh
+  clean_knowndevices: /bin/bash /config/shell_scripts/clean_knowndevices.sh

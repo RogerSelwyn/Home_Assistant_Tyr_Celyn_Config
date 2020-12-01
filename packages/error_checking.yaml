@@ -22,6 +22,6 @@ input_boolean:
 notify:
   - platform: file
     name: noderedlog
-    filename: noderedlog.csv
+    filename: logs/noderedlog.csv
     timestamp: true
   

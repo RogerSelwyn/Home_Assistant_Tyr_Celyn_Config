@@ -6,6 +6,7 @@
 custom_components
 icloud
 image
+logs
 node-red
 pyskyqhub
 ssh
@@ -15,7 +16,6 @@ www
 # Ignore files
 .uuid
 home-assistant*
-noderedlog*
 update.sh
 
 Reinclude files
