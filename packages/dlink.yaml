@@ -1,0 +1,8 @@
+binary_sensor:
+  - platform: dlink_hnap
+    name: Utility Motion
+    host: !secret dlink_host
+    type: motion
+    username: !secret dlink_username
+    password: !secret dlink_password
+    timeout: 35

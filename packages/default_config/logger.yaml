@@ -1,0 +1,9 @@
+logger:
+  default: warning
+  logs:
+    NodeRed: debug
+    # custom_components.sky_hub: debug
+    # pyskyqremote.skyq_hub: debug
+    custom_components.skyq: debug
+    pyskyqremote.skyq_remote: debug
+    # custom_components.dlink_hnap: debug

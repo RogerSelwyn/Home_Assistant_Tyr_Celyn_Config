@@ -2,10 +2,10 @@
 .cloud
 .google.token
 .O365-token-cache
-icloud
 .storage/*
 custom_components
 icloud
+image
 node-red
 pyskyqhub
 ssh

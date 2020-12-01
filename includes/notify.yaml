@@ -1,5 +1,0 @@
-- platform: file
-  name: noderedlog
-  filename: noderedlog.csv
-  timestamp: true
-  

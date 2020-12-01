@@ -1,0 +1,10 @@
+group:
+  remote_ha:
+    name: Remote HA
+    entities:
+      - input_boolean.presence_all
+      - input_boolean.presence_cleaner
+      - input_number.bookings_today
+      - input_number.bookings_tomorrow
+      - input_number.bookings_total
+      - binary_sensor.utility_motion

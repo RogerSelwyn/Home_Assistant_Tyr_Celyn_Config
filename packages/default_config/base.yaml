@@ -1,0 +1,13 @@
+frontend:
+  themes: !include_dir_merge_named themes
+
+config:
+person:
+script: 
+ssdp:
+sun:
+system_health:
+system_log:
+tts:
+  - platform: google_translate
+updater:

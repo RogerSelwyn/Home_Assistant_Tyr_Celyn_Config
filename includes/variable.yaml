@@ -1,6 +1,0 @@
-skyq_recordings:
-  name: Sky Q Recordings
-  value: HTML
-  attributes:
-    content: None
-  restore: True

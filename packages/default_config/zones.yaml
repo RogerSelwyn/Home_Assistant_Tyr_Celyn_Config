@@ -1,0 +1,31 @@
+weather:
+  - platform: darksky
+    name: Home
+    api_key: !secret darksky_key
+    units: uk
+    mode: daily
+    scan_interval: 60
+    latitude: !secret home_latitude
+    longitude: !secret home_longitude
+
+  - platform: darksky
+    name: Ty'r Celyn
+    api_key: !secret darksky_key
+    units: uk
+    mode: daily
+    scan_interval: 60
+    latitude: !secret tc_latitude
+    longitude: !secret tc_longitude
+
+zone:
+  - name: The Mews
+    latitude: !secret home_latitude
+    longitude: !secret home_longitude
+    radius: 100
+    icon: mdi:home
+
+  - name: Home
+    latitude: !secret tc_latitude
+    longitude: !secret tc_longitude
+    radius: 200
+    icon: mdi:home-variant-outline

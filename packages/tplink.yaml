@@ -1,0 +1,5 @@
+tplink:
+  discovery: false
+  switch:
+    - host: !secret tplink_switch_1
+    - host: !secret tplink_switch_2
