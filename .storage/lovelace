@@ -10,12 +10,15 @@
             "title": "Ty'r Celyn",
             "views": [
                 {
+                    "icon": "mdi:home-outline",
+                    "path": "default_view",
+                    "title": "Ty'r Celyn",
                     "badges": [
                         {
                             "entity": "binary_sensor.presence_all"
                         },
                         {
-                            "entity": "sensor.bookings"
+                            "entity": "binary_sensor.booking"
                         },
                         {
                             "entity": "sun.sun"
@@ -136,10 +139,7 @@
                             "title": "SkyQ Recordings",
                             "type": "custom:html-template-card"
                         }
-                    ],
-                    "icon": "mdi:home-outline",
-                    "path": "default_view",
-                    "title": "Ty'r Celyn"
+                    ]
                 },
                 {
                     "badges": [

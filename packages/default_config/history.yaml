@@ -27,7 +27,8 @@ history:
 
   exclude:
     entities:
-      - device_tracker.claresiphonepro
+      - device_tracker.claresiphonepro_2
+      - device_tracker.claresiphonepro_3
       - device_tracker.rogers_iphone
       - device_tracker.rogers_iphone_2
       - device_tracker.rosies_phone
