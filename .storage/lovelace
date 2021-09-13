@@ -138,6 +138,11 @@
                             "content": "{{ state_attr('variable.skyq_recordings','content') }}\n",
                             "title": "SkyQ Recordings",
                             "type": "custom:html-template-card"
+                        },
+                        {
+                            "content": "<b>{{ states('input_text.booking_name') }}</b><div>{{ state_attr('variable.booking_description','content') }}</div>\n",
+                            "title": "Booking",
+                            "type": "custom:html-template-card"
                         }
                     ]
                 },
@@ -213,7 +218,7 @@
                                                 "entity_id": "device_tracker.sky_uplink"
                                             },
                                             {
-                                                "entity_id": "*_ipad"
+                                                "entity_id": "*ipad"
                                             },
                                             {
                                                 "entity_id": "*now_tv*"
@@ -229,6 +234,12 @@
                                             },
                                             {
                                                 "entity_id": "*kindle*"
+                                            },
+                                            {
+                                                "entity_id": "*macbook*"
+                                            },
+                                            {
+                                                "entity_id": "*air"
                                             }
                                         ],
                                         "include": [
@@ -246,6 +257,25 @@
                             ],
                             "title": "Ty'r Celyn Presence",
                             "type": "vertical-stack"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "sensor.speedtest_download"
+                                },
+                                {
+                                    "entity": "sensor.speedtest_upload"
+                                },
+                                {
+                                    "entity": "sensor.speedtest_ping"
+                                }
+                            ],
+                            "title": "Speedtest"
+                        },
+                        {
+                            "type": "entity",
+                            "entity": "sensor.last_successful_authentication"
                         }
                     ],
                     "icon": "mdi:information",

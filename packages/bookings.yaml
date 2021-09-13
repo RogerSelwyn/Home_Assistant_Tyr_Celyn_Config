@@ -23,5 +23,18 @@ input_number:
     min: 0
     max: 10
 
-shell_command:
-  clean_knowndevices: /bin/bash /config/shell_scripts/clean_knowndevices.sh
+input_text:
+  booking_name:
+    name: Booking Name
+
+# shell_command:
+#   clean_knowndevices: /bin/bash -c "/config/shell_scripts/clean_knowndevices.sh"
+#   run_dropbox_sync: /bin/bash -c "/config/shell_scripts/run_dropbox_sync.sh >/config/logs/dropbox.log"
+  
+variable:
+  booking_description:
+    name: Booking Description
+    value: HTML
+    attributes:
+      content: None
+    restore: True

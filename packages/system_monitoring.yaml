@@ -1,3 +1,9 @@
+homeassistant:
+  customize:
+    sensor.hacs:
+      unit_of_measurement: 'Updates'
+      friendly_name: 'HACS'
+
 sensor:
   - platform: websocket_api
 

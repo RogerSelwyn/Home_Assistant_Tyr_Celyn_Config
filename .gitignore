@@ -17,6 +17,8 @@ www
 .uuid
 home-assistant*
 update.sh
+shell_scripts/.dropbox_uploader
+.ip_authenticated.yaml
 
 Reinclude files
 !.storage/lovelace

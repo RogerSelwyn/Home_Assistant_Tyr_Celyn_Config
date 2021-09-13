@@ -10,6 +10,7 @@ history:
       - binary_sensor.booking
       - person.clare_selwyn
       - person.roger_selwyn
+      - person.kim_farrington
       - person.rosie_parry
       - binary_sensor.internet
 #      - binary_sensor.sky_uplink
@@ -31,6 +32,8 @@ history:
       - device_tracker.claresiphonepro_3
       - device_tracker.rogers_iphone
       - device_tracker.rogers_iphone_2
-      - device_tracker.rosies_phone
+      - device_tracker.rogers_iphone_3
+      - device_tracker.rosies_a8
+      - device_tracker.kims_a20s
       - device_tracker.bluray
       - device_tracker.sky_uplink

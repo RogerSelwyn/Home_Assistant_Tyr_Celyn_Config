@@ -7,3 +7,4 @@ logger:
     custom_components.skyq: debug
     pyskyqremote.skyq_remote: debug
     # custom_components.dlink_hnap: debug
+    # homeassistant.components.device_tracker: error
