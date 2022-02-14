@@ -1,18 +1,24 @@
-binary_sensor:
-  - platform: template
-    sensors:
-      presence_all:
-        friendly_name: "Presence - All"
-        device_class: presence
-        value_template: "{{ is_state('input_boolean.presence_all', 'on') }}"
-      presence_cleaner:
-        friendly_name: "Presence - Cleaner"
-        device_class: presence
-        value_template: "{{ is_state('input_boolean.presence_cleaner', 'on') }}"
+homeassistant:
+  customize:
+    binary_sensor.presence_all:
+      friendly_name: "Presence - All"    
+    binary_sensor.presence_cleaner:
+      friendly_name: "Presence - Cleaner"
+# binary_sensor:
+#   - platform: template
+#     sensors:
+#       presence_all:
+#         friendly_name: "Presence - All"
+#         device_class: presence
+#         value_template: "{{ is_state('input_boolean.presence_all', 'on') }}"
+#       presence_cleaner:
+#         friendly_name: "Presence - Cleaner"
+#         device_class: presence
+#         value_template: "{{ is_state('input_boolean.presence_cleaner', 'on') }}"
 
-input_boolean:
-  presence_all:
-  presence_cleaner:
+# input_boolean:
+#   presence_all:
+#   presence_cleaner:
 
 timer:
   presence:

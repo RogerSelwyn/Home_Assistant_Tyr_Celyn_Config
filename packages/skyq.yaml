@@ -1,3 +1,14 @@
+input_boolean:
+  skyq_cleanup:
+    name: SkyQ Cleanup
+    icon: mdi:trash-can
+    initial: off
+  skyq_refresh:
+    name: SkyQ Refresh
+    icon: mdi:refresh-circle
+    initial: off
+
+
 sensor:
   - platform: template
     sensors:
@@ -28,10 +39,3 @@ sensor:
             {{ state_attr('media_player.sky_q', 'media_channel') }} - {{ state_attr('media_player.sky_q', 'media_series_title') }}
           {% endif %}
 
-variable:
-  skyq_recordings:
-    name: Sky Q Recordings
-    value: HTML
-    attributes:
-      content: None
-    restore: True

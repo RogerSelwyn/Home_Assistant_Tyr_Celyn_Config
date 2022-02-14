@@ -3,6 +3,7 @@
 .google.token
 .O365-token-cache
 .storage/*
+blueprints
 custom_components
 icloud
 image

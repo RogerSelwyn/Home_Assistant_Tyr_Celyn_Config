@@ -1,5 +1,6 @@
 {
     "version": 1,
+    "minor_version": 1,
     "key": "lovelace",
     "data": {
         "config": {
@@ -31,11 +32,12 @@
                             "type": "custom:weather-card"
                         },
                         {
-                            "artwork": "material",
+                            "artwork": "cover",
                             "entity": "media_player.sky_q",
                             "hide": {
+                                "icon_state": false,
                                 "power_state": false,
-                                "source": true,
+                                "source": false,
                                 "volume": true
                             },
                             "info": "scroll",
@@ -44,76 +46,76 @@
                                 "buttons": [
                                     {
                                         "icon": "mdi:chevron-up",
-                                        "id": "CHup",
-                                        "type": "source"
+                                        "id": "channelup",
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": "mdi:chevron-down",
-                                        "id": "CHdn",
-                                        "type": "source"
+                                        "id": "channeldown",
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": "mdi:record-rec",
-                                        "id": "Record",
-                                        "type": "source"
+                                        "id": "record",
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": null,
-                                        "id": "Sky",
+                                        "id": "sky",
                                         "name": "Sky",
-                                        "type": "source"
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": null,
-                                        "id": "TVGuide",
+                                        "id": "tvguide",
                                         "name": "Guide",
-                                        "type": "source"
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": "mdi:home-outline",
-                                        "id": "Home",
-                                        "type": "source"
+                                        "id": "home",
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": "mdi:menu-open",
-                                        "id": "Sidebar",
-                                        "type": "source"
+                                        "id": "sidebar",
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": "mdi:keyboard-return",
-                                        "id": "Dismiss",
-                                        "type": "source"
+                                        "id": "dismiss",
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": "mdi:information-variant",
-                                        "id": "I",
-                                        "type": "source"
+                                        "id": "i",
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": "mdi:arrow-right-thick",
-                                        "id": "Right",
-                                        "type": "source"
+                                        "id": "right",
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": "mdi:arrow-left-thick",
-                                        "id": "Left",
-                                        "type": "source"
+                                        "id": "left",
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": "mdi:arrow-up-thick",
-                                        "id": "Up",
-                                        "type": "source"
+                                        "id": "up",
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": "mdi:arrow-down-thick",
-                                        "id": "Down",
-                                        "type": "source"
+                                        "id": "down",
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": null,
-                                        "id": "Select",
+                                        "id": "select",
                                         "name": "Select",
-                                        "type": "source"
+                                        "type": "skyq"
                                     },
                                     {
                                         "icon": null,
@@ -135,12 +137,12 @@
                             "type": "custom:mini-media-player"
                         },
                         {
-                            "content": "{{ state_attr('variable.skyq_recordings','content') }}\n",
+                            "content": "{{ state_attr('sensor.skyq_recordings','content') }}\n",
                             "title": "SkyQ Recordings",
                             "type": "custom:html-template-card"
                         },
                         {
-                            "content": "<b>{{ states('input_text.booking_name') }}</b><div>{{ state_attr('variable.booking_description','content') }}</div>\n",
+                            "content": "<b>{{ states('sensor.booking_name') }}</b><div>{{ state_attr('sensor.booking_description','content') }}</div>\n",
                             "title": "Booking",
                             "type": "custom:html-template-card"
                         }
@@ -156,6 +158,31 @@
                         }
                     ],
                     "cards": [
+                        {
+                            "type": "glance",
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.skyq_cleanup",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    }
+                                },
+                                {
+                                    "entity": "input_boolean.skyq_refresh",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    }
+                                },
+                                {
+                                    "entity": "input_boolean.device_cleanup",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    }
+                                }
+                            ],
+                            "show_state": false,
+                            "title": "Maintenance"
+                        },
                         {
                             "entities": [
                                 {
@@ -272,10 +299,6 @@
                                 }
                             ],
                             "title": "Speedtest"
-                        },
-                        {
-                            "type": "entity",
-                            "entity": "sensor.last_successful_authentication"
                         }
                     ],
                     "icon": "mdi:information",

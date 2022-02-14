@@ -16,8 +16,8 @@ echo Clean up old snapshots
 find "$BKP_DIR"/* -mtime +4 -exec rm {} \;
 
 # Reload Snapshots in Home Assistant
-echo Reload snapshots
-ha sn reload
+# echo Reload snapshots
+# ha sn reload
 
 # mkdir /mnt/data
 # mount /dev/mmcblk0p2 /mnt/data

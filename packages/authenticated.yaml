@@ -1,2 +1,2 @@
-sensor:
-  - platform: authenticated
+# sensor:
+#   - platform: authenticated
