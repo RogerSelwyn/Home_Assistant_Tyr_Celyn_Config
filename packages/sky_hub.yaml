@@ -1,7 +1,7 @@
-device_tracker:
-  - platform: sky_hub
-    host: !secret skyhub_host
-    interval_seconds: 20
+# device_tracker:
+#   - platform: sky_hub
+#     host: !secret skyhub_host
+#     interval_seconds: 20
 
 #- platform: luci
 #  host: !secret openwrt_host

@@ -12,18 +12,18 @@ input_boolean:
 sensor:
   - platform: template
     sensors:
-      sky_media_content_type:
-        friendly_name: "Media Content Type"
-        value_template: "{{ state_attr('media_player.sky_q', 'media_content_type') }}"
-      sky_media_title:
-        friendly_name: "Media Title"
-        value_template: "{{ state_attr('media_player.sky_q', 'media_title') }}"
-      sky_media_channel:
-        friendly_name: "Media Channel"
-        value_template: "{{ state_attr('media_player.sky_q', 'media_channel') }}"
-      sky_media_series_title:
-        friendly_name: "Media Series Title"
-        value_template: "{{ state_attr('media_player.sky_q', 'media_series_title') }}"
+    #   sky_media_content_type:
+    #     friendly_name: "Media Content Type"
+    #     value_template: "{{ state_attr('media_player.sky_q', 'media_content_type') }}"
+    #   sky_media_title:
+    #     friendly_name: "Media Title"
+    #     value_template: "{{ state_attr('media_player.sky_q', 'media_title') }}"
+    #   sky_media_channel:
+    #     friendly_name: "Media Channel"
+    #     value_template: "{{ state_attr('media_player.sky_q', 'media_channel') }}"
+    #   sky_media_series_title:
+    #     friendly_name: "Media Series Title"
+    #     value_template: "{{ state_attr('media_player.sky_q', 'media_series_title') }}"
       sky_media_playing:
         friendly_name: "Sky Q"
         value_template: >-

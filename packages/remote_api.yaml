@@ -8,3 +8,5 @@ group:
       - sensor.bookings_tomorrow
       - sensor.bookings_total
       - binary_sensor.utility_motion
+      - binary_sensor.tctv
+      - binary_sensor.booking

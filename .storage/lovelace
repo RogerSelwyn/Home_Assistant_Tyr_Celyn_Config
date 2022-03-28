@@ -137,8 +137,18 @@
                             "type": "custom:mini-media-player"
                         },
                         {
+                            "artwork": "cover",
+                            "hide": {
+                                "icon_state": false,
+                                "power_state": false
+                            },
+                            "icon": "mdi:television",
+                            "type": "custom:mini-media-player",
+                            "entity": "media_player.tctv"
+                        },
+                        {
                             "content": "{{ state_attr('sensor.skyq_recordings','content') }}\n",
-                            "title": "SkyQ Recordings",
+                            "title": "Sky Q Recordings",
                             "type": "custom:html-template-card"
                         },
                         {
@@ -149,9 +159,13 @@
                     ]
                 },
                 {
+                    "theme": "Backend-selected",
+                    "icon": "mdi:information-variant",
+                    "path": "info",
+                    "title": "Info",
                     "badges": [
                         {
-                            "entity": "binary_sensor.updater"
+                            "entity": "binary_sensor.home_assistant_website_update_available"
                         },
                         {
                             "entity": "sensor.hacs"
@@ -193,6 +207,9 @@
                                 },
                                 {
                                     "entity": "sensor.cpu_temperature"
+                                },
+                                {
+                                    "entity": "binary_sensor.rpi_power_status"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -240,9 +257,6 @@
                                         "exclude": [
                                             {
                                                 "entity_id": "device_tracker.bluray"
-                                            },
-                                            {
-                                                "entity_id": "device_tracker.sky_uplink"
                                             },
                                             {
                                                 "entity_id": "*ipad"
@@ -300,10 +314,7 @@
                             ],
                             "title": "Speedtest"
                         }
-                    ],
-                    "icon": "mdi:information",
-                    "path": "info",
-                    "title": "Info"
+                    ]
                 }
             ]
         }
