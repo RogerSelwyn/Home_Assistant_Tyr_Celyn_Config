@@ -1,8 +1,13 @@
 binary_sensor:
   - platform: dlink_hnap
-    name: Utility Motion
+    name: Tyrcelyn Utility Motion
     host: !secret dlink_host
     type: motion
     username: !secret dlink_username
     password: !secret dlink_password
     timeout: 35
+
+homeassistant:
+  customize:
+    binary_sensor.tyrcelyn_utility_motion:
+      friendly_name: "Utility Motion"    

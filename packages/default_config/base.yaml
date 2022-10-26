@@ -3,6 +3,8 @@ frontend:
 
 config:
 diagnostics:
+hardware:
+logbook:
 person:
 script: 
 ssdp:

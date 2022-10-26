@@ -29,3 +29,5 @@ Reinclude files
 ip_bans.yaml
 secrets.yaml
 known_devices.yaml
+tyrcelyn.conf
+o365_calendars_roger.yaml

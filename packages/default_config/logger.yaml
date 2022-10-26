@@ -9,3 +9,4 @@ logger:
     pyskyqhub: info
     # custom_components.dlink_hnap: debug
     # homeassistant.components.device_tracker: error
+    braviapsk.sony_bravia_psk: critical

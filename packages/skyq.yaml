@@ -38,4 +38,12 @@ sensor:
           {% else %}
             {{ state_attr('media_player.sky_q', 'media_channel') }} - {{ state_attr('media_player.sky_q', 'media_series_title') }}
           {% endif %}
+      tyrcelyn_sky_pin:
+        friendly_name: "Ty'r Celyn Sky Pin"
+        value_template: >-
+          {% if state_attr('media_player.sky_q', 'skyq_transport_status') %}
+            {{ state_attr('media_player.sky_q', 'skyq_transport_status') }}
+          {% else %}
+            Off
+          {% endif %}
 

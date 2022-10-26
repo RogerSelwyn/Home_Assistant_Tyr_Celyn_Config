@@ -1,322 +1,447 @@
 {
-    "version": 1,
-    "minor_version": 1,
-    "key": "lovelace",
-    "data": {
-        "config": {
-            "background": "var(--background-image)",
-            "swipe_nav": {
-                "animate": "swipe"
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace",
+  "data": {
+    "config": {
+      "background": "var(--background-image)",
+      "swipe_nav": {
+        "animate": "swipe"
+      },
+      "title": "Ty'r Celyn",
+      "views": [
+        {
+          "icon": "mdi:home-outline",
+          "path": "default_view",
+          "title": "Ty'r Celyn",
+          "badges": [
+            {
+              "entity": "binary_sensor.tyrcelyn_presence_all"
             },
-            "title": "Ty'r Celyn",
-            "views": [
-                {
+            {
+              "entity": "binary_sensor.tyrcelyn_booking"
+            },
+            {
+              "entity": "sun.sun"
+            }
+          ],
+          "cards": [
+            {
+              "entity": "weather.ty_r_celyn",
+              "name": "TC",
+              "type": "custom:weather-card"
+            },
+            {
+              "artwork": "cover",
+              "entity": "media_player.sky_q",
+              "hide": {
+                "icon_state": false,
+                "power_state": false,
+                "source": false,
+                "volume": true
+              },
+              "info": "scroll",
+              "name": "SkyQ",
+              "shortcuts": {
+                "buttons": [
+                  {
+                    "icon": "mdi:chevron-up",
+                    "id": "channelup",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": "mdi:chevron-down",
+                    "id": "channeldown",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": "mdi:record-rec",
+                    "id": "record",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": null,
+                    "id": "sky",
+                    "name": "Sky",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": null,
+                    "id": "tvguide",
+                    "name": "Guide",
+                    "type": "skyq"
+                  },
+                  {
                     "icon": "mdi:home-outline",
-                    "path": "default_view",
-                    "title": "Ty'r Celyn",
-                    "badges": [
-                        {
-                            "entity": "binary_sensor.presence_all"
-                        },
-                        {
-                            "entity": "binary_sensor.booking"
-                        },
-                        {
-                            "entity": "sun.sun"
-                        }
-                    ],
-                    "cards": [
-                        {
-                            "entity": "weather.ty_r_celyn",
-                            "name": "TC",
-                            "type": "custom:weather-card"
-                        },
-                        {
-                            "artwork": "cover",
-                            "entity": "media_player.sky_q",
-                            "hide": {
-                                "icon_state": false,
-                                "power_state": false,
-                                "source": false,
-                                "volume": true
-                            },
-                            "info": "scroll",
-                            "name": "SkyQ",
-                            "shortcuts": {
-                                "buttons": [
-                                    {
-                                        "icon": "mdi:chevron-up",
-                                        "id": "channelup",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": "mdi:chevron-down",
-                                        "id": "channeldown",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": "mdi:record-rec",
-                                        "id": "record",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": null,
-                                        "id": "sky",
-                                        "name": "Sky",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": null,
-                                        "id": "tvguide",
-                                        "name": "Guide",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": "mdi:home-outline",
-                                        "id": "home",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": "mdi:menu-open",
-                                        "id": "sidebar",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": "mdi:keyboard-return",
-                                        "id": "dismiss",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": "mdi:information-variant",
-                                        "id": "i",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": "mdi:arrow-right-thick",
-                                        "id": "right",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": "mdi:arrow-left-thick",
-                                        "id": "left",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": "mdi:arrow-up-thick",
-                                        "id": "up",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": "mdi:arrow-down-thick",
-                                        "id": "down",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": null,
-                                        "id": "select",
-                                        "name": "Select",
-                                        "type": "skyq"
-                                    },
-                                    {
-                                        "icon": null,
-                                        "name": null
-                                    },
-                                    {
-                                        "icon": null
-                                    },
-                                    {
-                                        "icon": null
-                                    },
-                                    {
-                                        "icon": null
-                                    }
-                                ],
-                                "columns": 6,
-                                "hide_when_off": true
-                            },
-                            "type": "custom:mini-media-player"
-                        },
-                        {
-                            "artwork": "cover",
-                            "hide": {
-                                "icon_state": false,
-                                "power_state": false
-                            },
-                            "icon": "mdi:television",
-                            "type": "custom:mini-media-player",
-                            "entity": "media_player.tctv"
-                        },
-                        {
-                            "content": "{{ state_attr('sensor.skyq_recordings','content') }}\n",
-                            "title": "Sky Q Recordings",
-                            "type": "custom:html-template-card"
-                        },
-                        {
-                            "content": "<b>{{ states('sensor.booking_name') }}</b><div>{{ state_attr('sensor.booking_description','content') }}</div>\n",
-                            "title": "Booking",
-                            "type": "custom:html-template-card"
-                        }
-                    ]
+                    "id": "home",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": "mdi:menu-open",
+                    "id": "sidebar",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": "mdi:keyboard-return",
+                    "id": "dismiss",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": "mdi:information-variant",
+                    "id": "i",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": "mdi:arrow-right-thick",
+                    "id": "right",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": "mdi:arrow-left-thick",
+                    "id": "left",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": "mdi:arrow-up-thick",
+                    "id": "up",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": "mdi:arrow-down-thick",
+                    "id": "down",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": null,
+                    "id": "select",
+                    "name": "Select",
+                    "type": "skyq"
+                  },
+                  {
+                    "icon": null,
+                    "name": null
+                  },
+                  {
+                    "icon": null
+                  },
+                  {
+                    "icon": null
+                  },
+                  {
+                    "icon": null
+                  }
+                ],
+                "columns": 6,
+                "hide_when_off": true
+              },
+              "type": "custom:mini-media-player"
+            },
+            {
+              "artwork": "cover",
+              "hide": {
+                "icon_state": false,
+                "power_state": false
+              },
+              "icon": "mdi:television",
+              "type": "custom:mini-media-player",
+              "entity": "media_player.tyrcelyn_tctv"
+            },
+            {
+              "content": "{{ state_attr('sensor.skyq_recordings','content') }}\n",
+              "title": "Sky Q Recordings",
+              "type": "custom:html-template-card"
+            },
+            {
+              "content": "<b>{{ states('sensor.booking_name') }}</b><div>{{ state_attr('sensor.booking_description','content') }}</div>\n",
+              "title": "Booking",
+              "type": "custom:html-template-card"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "switch.tc_tv"
                 },
                 {
-                    "theme": "Backend-selected",
-                    "icon": "mdi:information-variant",
-                    "path": "info",
-                    "title": "Info",
-                    "badges": [
-                        {
-                            "entity": "binary_sensor.home_assistant_website_update_available"
-                        },
-                        {
-                            "entity": "sensor.hacs"
-                        }
-                    ],
-                    "cards": [
-                        {
-                            "type": "glance",
-                            "entities": [
-                                {
-                                    "entity": "input_boolean.skyq_cleanup",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    }
-                                },
-                                {
-                                    "entity": "input_boolean.skyq_refresh",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    }
-                                },
-                                {
-                                    "entity": "input_boolean.device_cleanup",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    }
-                                }
-                            ],
-                            "show_state": false,
-                            "title": "Maintenance"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.processor_use"
-                                },
-                                {
-                                    "entity": "sensor.memory_free"
-                                },
-                                {
-                                    "entity": "sensor.cpu_temperature"
-                                },
-                                {
-                                    "entity": "binary_sensor.rpi_power_status"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Pi",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                "sensor.connected_clients"
-                            ],
-                            "hours_to_show": 24,
-                            "refresh_interval": 0,
-                            "title": "Connected Clients",
-                            "type": "history-graph"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.workshop_camera"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Plugs",
-                            "type": "entities"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "entities": [
-                                        {
-                                            "entity": "binary_sensor.presence_all"
-                                        },
-                                        {
-                                            "entity": "timer.presence"
-                                        }
-                                    ],
-                                    "type": "entities"
-                                },
-                                {
-                                    "card": {
-                                        "show_header_toggle": false,
-                                        "type": "entities"
-                                    },
-                                    "filter": {
-                                        "exclude": [
-                                            {
-                                                "entity_id": "device_tracker.bluray"
-                                            },
-                                            {
-                                                "entity_id": "*ipad"
-                                            },
-                                            {
-                                                "entity_id": "*now_tv*"
-                                            },
-                                            {
-                                                "entity_id": "*chromecast*"
-                                            },
-                                            {
-                                                "entity_id": "*galaxy_tab*"
-                                            },
-                                            {
-                                                "entity_id": "*amazon*"
-                                            },
-                                            {
-                                                "entity_id": "*kindle*"
-                                            },
-                                            {
-                                                "entity_id": "*macbook*"
-                                            },
-                                            {
-                                                "entity_id": "*air"
-                                            }
-                                        ],
-                                        "include": [
-                                            {
-                                                "state": "home"
-                                            }
-                                        ]
-                                    },
-                                    "sort": {
-                                        "ignore_case": true,
-                                        "method": "entity_id"
-                                    },
-                                    "type": "custom:auto-entities"
-                                }
-                            ],
-                            "title": "Ty'r Celyn Presence",
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "sensor.speedtest_download"
-                                },
-                                {
-                                    "entity": "sensor.speedtest_upload"
-                                },
-                                {
-                                    "entity": "sensor.speedtest_ping"
-                                }
-                            ],
-                            "title": "Speedtest"
-                        }
-                    ]
+                  "entity": "sensor.tc_tv_current_energy"
                 }
-            ]
+              ]
+            }
+          ]
+        },
+        {
+          "theme": "Backend-selected",
+          "icon": "mdi:information-variant",
+          "path": "info",
+          "title": "Info",
+          "badges": [
+            {
+              "entity": "binary_sensor.home_assistant_website_update_available"
+            },
+            {
+              "entity": "sensor.hacs"
+            }
+          ],
+          "cards": [
+            {
+              "type": "glance",
+              "entities": [
+                {
+                  "entity": "input_boolean.skyq_cleanup",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "entity": "input_boolean.skyq_refresh",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "entity": "input_boolean.device_cleanup",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                }
+              ],
+              "show_state": false,
+              "title": "Maintenance"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "sensor.processor_use"
+                },
+                {
+                  "entity": "sensor.memory_free"
+                },
+                {
+                  "entity": "sensor.cpu_temperature"
+                },
+                {
+                  "entity": "binary_sensor.rpi_power_status"
+                }
+              ],
+              "show_header_toggle": false,
+              "title": "Pi",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                "sensor.connected_clients"
+              ],
+              "hours_to_show": 24,
+              "refresh_interval": 0,
+              "title": "Connected Clients",
+              "type": "history-graph"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "switch.workshop_camera"
+                }
+              ],
+              "show_header_toggle": false,
+              "title": "Plugs",
+              "type": "entities"
+            },
+            {
+              "cards": [
+                {
+                  "entities": [
+                    {
+                      "entity": "binary_sensor.tyrcelyn_presence_all"
+                    },
+                    {
+                      "entity": "timer.presence"
+                    }
+                  ],
+                  "type": "entities"
+                },
+                {
+                  "card": {
+                    "show_header_toggle": false,
+                    "type": "entities"
+                  },
+                  "filter": {
+                    "exclude": [
+                      {
+                        "entity_id": "device_tracker.bluray"
+                      },
+                      {
+                        "entity_id": "*ipad"
+                      },
+                      {
+                        "entity_id": "*now_tv*"
+                      },
+                      {
+                        "entity_id": "*chromecast*"
+                      },
+                      {
+                        "entity_id": "*galaxy_tab*"
+                      },
+                      {
+                        "entity_id": "*amazon*"
+                      },
+                      {
+                        "entity_id": "*kindle*"
+                      },
+                      {
+                        "entity_id": "*macbook*"
+                      },
+                      {
+                        "entity_id": "*air"
+                      },
+                      {
+                        "entity_id": "*glowstick"
+                      },
+                      {
+                        "entity_id": "*xbox*"
+                      }
+                    ],
+                    "include": [
+                      {
+                        "state": "home"
+                      }
+                    ]
+                  },
+                  "sort": {
+                    "ignore_case": true,
+                    "method": "entity_id"
+                  },
+                  "type": "custom:auto-entities"
+                }
+              ],
+              "title": "Ty'r Celyn Presence",
+              "type": "vertical-stack"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.utility_room_battery"
+                },
+                {
+                  "entity": "sensor.utility_room_illuminance"
+                },
+                {
+                  "entity": "sensor.utility_room_temperature"
+                }
+              ],
+              "title": "Hue"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "sensor.speedtest_download"
+                },
+                {
+                  "entity": "sensor.speedtest_upload"
+                },
+                {
+                  "entity": "sensor.speedtest_ping"
+                }
+              ],
+              "title": "Speedtest"
+            }
+          ]
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "Devices",
+          "path": "devices",
+          "type": "panel",
+          "icon": "mdi:devices",
+          "badges": [],
+          "cards": [
+            {
+              "card": {
+                "type": "history-graph",
+                "hours_to_show": 24
+              },
+              "filter": {
+                "exclude": [
+                  {
+                    "entity_id": "device_tracker.bluray"
+                  },
+                  {
+                    "entity_id": "*ipad"
+                  },
+                  {
+                    "entity_id": "*now_tv*"
+                  },
+                  {
+                    "entity_id": "*chromecast*"
+                  },
+                  {
+                    "entity_id": "*galaxy_tab*"
+                  },
+                  {
+                    "entity_id": "*amazon*"
+                  },
+                  {
+                    "entity_id": "*kindle*"
+                  },
+                  {
+                    "entity_id": "*macbook*"
+                  },
+                  {
+                    "entity_id": "*air"
+                  },
+                  {
+                    "entity_id": "*glowstick"
+                  },
+                  {
+                    "entity_id": "*laptop*"
+                  },
+                  {
+                    "entity_id": "*xbox*"
+                  },
+                  {
+                    "entity_id": "device_tracker.roger*"
+                  },
+                  {
+                    "entity_id": "device_tracker.clare*"
+                  },
+                  {
+                    "entity_id": "device_tracker.kims_a20s"
+                  },
+                  {
+                    "entity_id": "device_tracker.tracey_jane"
+                  },
+                  {
+                    "entity_id": "device_tracker.rosies_a8_2018"
+                  }
+                ],
+                "include": [
+                  {
+                    "entity_id": "binary_sensor.tyrcelyn_presence_all"
+                  },
+                  {
+                    "entity_id": "binary_sensor.tyrcelyn_utility_motion"
+                  },
+                  {
+                    "entity_id": "binary_sensor.tyrcelyn_utility_room_motion"
+                  },
+                  {
+                    "entity_id": "person.*"
+                  },
+                  {
+                    "entity_id": "device_tracker.*"
+                  }
+                ]
+              },
+              "sort": {
+                "ignore_case": true,
+                "method": "entity_id"
+              },
+              "type": "custom:auto-entities"
+            }
+          ]
         }
+      ]
     }
+  }
 }

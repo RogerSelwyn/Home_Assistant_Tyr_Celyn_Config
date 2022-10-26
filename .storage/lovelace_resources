@@ -1,29 +1,34 @@
 {
-    "version": 1,
-    "minor_version": 1,
-    "key": "lovelace_resources",
-    "data": {
-        "items": [
-            {
-                "id": "04fef14347c2425cbb2b23e9a07f310e",
-                "type": "module",
-                "url": "/hacsfiles/mini-media-player/mini-media-player-bundle.js?hacstag=1485208381162"
-            },
-            {
-                "id": "0e184b554f4342e0af6d7dffcadae456",
-                "type": "module",
-                "url": "/hacsfiles/weather-card/weather-card.js"
-            },
-            {
-                "id": "19f0a5d3a9134f199943bf6f5eed4190",
-                "type": "module",
-                "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js?hacstag=1677445841110"
-            },
-            {
-                "id": "e8a408f8c72a4a82896c21ad04be53c9",
-                "type": "module",
-                "url": "/hacsfiles/Home-Assistant-Lovelace-HTML-Jinja2-Template-card/html-template-card.js"
-            }
-        ]
-    }
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "id": "04fef14347c2425cbb2b23e9a07f310e",
+        "type": "module",
+        "url": "/hacsfiles/mini-media-player/mini-media-player-bundle.js?hacstag=1485208381164"
+      },
+      {
+        "id": "0e184b554f4342e0af6d7dffcadae456",
+        "type": "module",
+        "url": "/hacsfiles/weather-card/weather-card.js"
+      },
+      {
+        "id": "19f0a5d3a9134f199943bf6f5eed4190",
+        "type": "module",
+        "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js?hacstag=1677445841110"
+      },
+      {
+        "id": "e8a408f8c72a4a82896c21ad04be53c9",
+        "type": "module",
+        "url": "/hacsfiles/Home-Assistant-Lovelace-HTML-Jinja2-Template-card/html-template-card.js"
+      },
+      {
+        "url": "/hacsfiles/history-explorer-card/history-explorer-card.js?hacstag=4403747941028",
+        "type": "module",
+        "id": "07bad40b5de94235a864d31de43948b7"
+      }
+    ]
+  }
 }

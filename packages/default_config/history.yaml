@@ -1,40 +1,43 @@
 history:
-  use_include_order: true
-  include:
-    domains:
-      - device_tracker
-    entities:
-      - binary_sensor.utility_motion
-      - binary_sensor.presence_all
-#    - binary_sensor.presence_cleaner
-      - binary_sensor.booking
-      - person.clare_selwyn
-      - person.roger_selwyn
-      - person.benjamin_selwyn
-      - person.kim_farrington
-      - binary_sensor.internet
-#      - binary_sensor.sky_uplink
-      - binary_sensor.garage_cam
-      - binary_sensor.workshop_cam
-      - sensor.sky_media_playing
-      - media_player.tctv
-      - sensor.tv_media_playing
-      - binary_sensor.bluray
-      - sun.sun
-      - weather.ty_r_celyn
+#   use_include_order: true
+#   include:
+#     domains:
+#       - device_tracker
+#     entities:
+#       - binary_sensor.tyrcelyn_utility_motion
+#       - binary_sensor.tyrcelyn_presence_all
+# #    - binary_sensor.presence_cleaner
+#       - binary_sensor.tyrcelyn_booking
+#       - person.clare_selwyn
+#       - person.roger_selwyn
+#       - person.benjamin_selwyn
+#       - person.kim_farrington
+#       - person.cleaner
+#       - binary_sensor.internet
+# #      - binary_sensor.sky_uplink
+#       - binary_sensor.garage_cam
+#       - binary_sensor.workshop_cam
+#       - sensor.sky_media_playing
+#       - media_player.tyrcelyn_tctv
+#       - sensor.tv_media_playing
+#       - binary_sensor.bluray
+#       - sun.sun
+#       - weather.ty_r_celyn
 
-      - sensor.cpu_temperature
-      - sensor.memory_free
-      - sensor.processor_use
-      - sensor.connected_clients
+#       - sensor.cpu_temperature
+#       - sensor.memory_free
+#       - sensor.processor_use
+#       - sensor.connected_clients
 
-  exclude:
-    entities:
-      - device_tracker.kims_a20s
-      - device_tracker.bluray
-      - device_tracker.sky_uplink
-      - device_tracker.rosies_a8
-    entity_globs:
-      - device_tracker.roger*
-      - device_tracker.clare*
-      - device_tracker.ben*
+#   exclude:
+#     entities:
+#       - device_tracker.kims_a20s
+#       - device_tracker.bluray
+#       - device_tracker.sky_uplink
+#       - device_tracker.rosies_a8
+#       - device_tracker.glowstick
+#       - device_tracker.tracey_jane
+#     entity_globs:
+#       - device_tracker.roger*
+#       - device_tracker.clare*
+#       - device_tracker.ben*

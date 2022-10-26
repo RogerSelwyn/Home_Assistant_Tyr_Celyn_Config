@@ -1,8 +1,8 @@
 homeassistant:
   customize:
-    binary_sensor.presence_all:
+    binary_sensor.tyrcelyn_presence_all:
       friendly_name: "Presence - All"    
-    binary_sensor.presence_cleaner:
+    binary_sensor.tyrcelyn_presence_cleaner:
       friendly_name: "Presence - Cleaner"
 # binary_sensor:
 #   - platform: template
@@ -24,3 +24,4 @@ timer:
   presence:
     name: Time to Away
     duration: '00:03:00'
+    restore: true

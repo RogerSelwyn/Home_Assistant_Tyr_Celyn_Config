@@ -2,7 +2,7 @@ weather:
   - platform: darksky
     name: Home
     api_key: !secret darksky_key
-    units: uk
+ #  units: uk
     mode: daily
     scan_interval: 60
     latitude: !secret home_latitude
@@ -11,7 +11,7 @@ weather:
   - platform: darksky
     name: Ty'r Celyn
     api_key: !secret darksky_key
-    units: uk
+ #  units: uk
     mode: daily
     scan_interval: 60
     latitude: !secret tc_latitude

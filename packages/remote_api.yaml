@@ -2,8 +2,8 @@ group:
   remote_ha:
     name: Remote HA
     entities:
-      - binary_sensor.presence_all
-      - binary_sensor.presence_cleaner
+    #   - binary_sensor.tyrcelyn_presence_all
+    #   - binary_sensor.presence_cleaner
       - sensor.bookings_today
       - sensor.bookings_tomorrow
       - sensor.bookings_total

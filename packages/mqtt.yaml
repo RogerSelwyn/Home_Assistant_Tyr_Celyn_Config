@@ -1,0 +1,23 @@
+mqtt_discoverystream:
+  base_topic: tyrcelyn
+  discovery_topic: homeassistant
+  publish_attributes: true
+  publish_timestamps: true
+  publish_discovery: true
+  include:
+    entities:
+      - binary_sensor.tyrcelyn_presence_all
+      - binary_sensor.tyrcelyn_presence_cleaner
+      - sensor.tyrcelyn_bookings_today
+      - sensor.tyrcelyn_bookings_tomorrow
+      - sensor.tyrcelyn_bookings_total
+      - binary_sensor.tyrcelyn_utility_motion
+      - binary_sensor.tyrcelyn_utility_room_motion
+      - binary_sensor.tyrcelyn_tctv
+#      - media_player.tyrcelyn_tctv
+      - binary_sensor.tyrcelyn_booking
+      - sensor.tyrcelyn_sky_pin
+      - binary_sensor.tyrcelyn_test
+      - sensor.tc_tv_current_energy
+      - sensor.tc_tv_today_energy
+      - sensor.tc_tv_month_energy

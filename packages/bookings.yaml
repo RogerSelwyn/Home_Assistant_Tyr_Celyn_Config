@@ -1,6 +1,6 @@
 homeassistant:
   customize:
-    binary_sensor.booking:
+    binary_sensor.tyrcelyn_booking:
       friendly_name: "Booked"
 
 # binary_sensor:

@@ -1,0 +1,6 @@
+o365:
+  accounts:
+    - account_name: roger
+      client_secret: !secret o365_secret
+      client_id: !secret o365_id
+      alt_auth_method: False
