@@ -1,8 +1,8 @@
 mqtt_discoverystream:
   base_topic: tyrcelyn
-  discovery_topic: homeassistant
-  publish_attributes: true
-  publish_timestamps: true
+  discovery_topic: tyrcelyn-discovery
+  publish_attributes: false
+  publish_timestamps: false
   publish_discovery: true
   include:
     entities:
@@ -11,13 +11,16 @@ mqtt_discoverystream:
       - sensor.tyrcelyn_bookings_today
       - sensor.tyrcelyn_bookings_tomorrow
       - sensor.tyrcelyn_bookings_total
-      - binary_sensor.tyrcelyn_utility_motion
+#      - binary_sensor.tyrcelyn_utility_motion
       - binary_sensor.tyrcelyn_utility_room_motion
       - binary_sensor.tyrcelyn_tctv
-#      - media_player.tyrcelyn_tctv
       - binary_sensor.tyrcelyn_booking
       - sensor.tyrcelyn_sky_pin
-      - binary_sensor.tyrcelyn_test
-      - sensor.tc_tv_current_energy
+      - sensor.tc_tv_current_power
       - sensor.tc_tv_today_energy
       - sensor.tc_tv_month_energy
+      
+homeassistant:
+  customize:
+    binary_sensor.tyrcelyn_protect_lr:
+      friendly_name: "Protect"

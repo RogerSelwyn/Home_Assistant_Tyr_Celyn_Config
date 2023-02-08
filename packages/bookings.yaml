@@ -1,50 +1,14 @@
-homeassistant:
-  customize:
-    binary_sensor.tyrcelyn_booking:
-      friendly_name: "Booked"
+# homeassistant:
+#   customize:
+#     binary_sensor.tyrcelyn_booking:
+#       friendly_name: "Booked"
 
-# binary_sensor:
-#   - platform: template
-#     sensors:
-#       booking:
-#         friendly_name: "Booked"
-#         device_class: presence
-#         value_template: "{{ is_state('input_boolean.booking', 'on') }}"
-
-input_boolean:
-#   booking:
-  device_cleanup:
-    name: Device Cleanup
-    icon: mdi:delete-variant
-    initial: off
-
-  
-# input_number:
-#   bookings_today:
-#     name: Bookings Today
-#     min: 0
-#     max: 10
-#   bookings_tomorrow:
-#     name: Bookings Tomorrow
-#     min: 0
-#     max: 10
-#   bookings_total:
-#     name: Bookings Total
-#     min: 0
-#     max: 10
-
-# input_text:
-#   booking_name:
-#     name: Booking Name
+# input_boolean:
+#   device_cleanup:
+#     name: Device Cleanup
+#     icon: mdi:delete-variant
+#     initial: off
 
 # shell_command:
 #   clean_knowndevices: /bin/bash -c "/config/shell_scripts/clean_knowndevices.sh"
 #   run_dropbox_sync: /bin/bash -c "/config/shell_scripts/run_dropbox_sync.sh >/config/logs/dropbox.log"
-  
-# variable:
-#   booking_description:
-#     name: Booking Description
-#     value: HTML
-#     attributes:
-#       content: None
-#     restore: True

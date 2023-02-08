@@ -32,6 +32,11 @@
               "type": "custom:weather-card"
             },
             {
+              "type": "thermostat",
+              "entity": "climate.tyr_celyn",
+              "name": "Read Only"
+            },
+            {
               "artwork": "cover",
               "entity": "media_player.sky_q",
               "hide": {
@@ -163,7 +168,7 @@
                   "entity": "switch.tc_tv"
                 },
                 {
-                  "entity": "sensor.tc_tv_current_energy"
+                  "entity": "sensor.tc_tv_current_power"
                 }
               ]
             }
@@ -187,19 +192,19 @@
               "type": "glance",
               "entities": [
                 {
-                  "entity": "input_boolean.skyq_cleanup",
+                  "entity": "switch.skyq_cleanup",
                   "tap_action": {
                     "action": "toggle"
                   }
                 },
                 {
-                  "entity": "input_boolean.skyq_refresh",
+                  "entity": "switch.skyq_refresh",
                   "tap_action": {
                     "action": "toggle"
                   }
                 },
                 {
-                  "entity": "input_boolean.device_cleanup",
+                  "entity": "switch.device_cleanup",
                   "tap_action": {
                     "action": "toggle"
                   }
@@ -406,6 +411,12 @@
                     "entity_id": "device_tracker.clare*"
                   },
                   {
+                    "entity_id": "device_tracker.benjamin*"
+                  },
+                  {
+                    "entity_id": "device_tracker.cleaner*"
+                  },
+                  {
                     "entity_id": "device_tracker.kims_a20s"
                   },
                   {
@@ -426,16 +437,15 @@
                     "entity_id": "binary_sensor.tyrcelyn_utility_room_motion"
                   },
                   {
-                    "entity_id": "person.*"
+                    "entity_id": "binary_sensor.tyrcelyn_protect_lr"
                   },
                   {
                     "entity_id": "device_tracker.*"
+                  },
+                  {
+                    "entity_id": "person.*"
                   }
                 ]
-              },
-              "sort": {
-                "ignore_case": true,
-                "method": "entity_id"
               },
               "type": "custom:auto-entities"
             }

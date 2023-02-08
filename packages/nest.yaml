@@ -1,0 +1,83 @@
+homeassistant:
+  customize:
+    binary_sensor.nest_heating:
+      friendly_name: " TC - Heating"
+    # binary_sensor.nest_hotwater:
+    #   friendly_name: " TC - Hot Water"
+    binary_sensor.nest_heating_manual:
+      friendly_name: " TC - Heating Manual"
+
+
+template:
+  - binary_sensor:
+      - name: nest_heating
+        unique_id: nest_heating
+        device_class: heat
+        state: >-
+          {{ is_state_attr('climate.tyr_celyn', 'hvac_action', 'heating') }}
+#   - binary_sensor:
+#       - name: nest_hotwater
+#         unique_id: nest_hotwater
+#         device_class: heat
+#         state: >-
+#           {{ is_state('switch.tyr_celyn_thermostat_2', 'on') }}
+  - binary_sensor:
+      - name: nest_heating_manual
+        unique_id: nest_heating_manual
+        device_class: heat
+        state: >-
+          {% if state_attr('climate.tyr_celyn', 'hvac_action') == 'heating' and
+             state_attr('climate.tyr_celyn', 'temperature') is defined and
+             state_attr('climate.tyr_celyn', 'current_temperature') > state_attr('climate.tyr_celyn', 'temperature') + 0.5 %}
+            true
+          {% else %}
+            false
+          {% endif %}
+
+  - sensor:
+      - name: nest_heating
+        unique_id: nest_heating
+        device_class: temperature
+        unit_of_measurement: °C
+        state: >-
+          {% if state_attr('climate.tyr_celyn', 'hvac_action') == 'heating' %}
+            {{ state_attr('climate.tyr_celyn', 'current_temperature') }}
+          {% else %}
+            0
+          {% endif %}
+#   - sensor:
+#       - name: nest_hotwater
+#         unique_id: nest_hotwater
+#         unit_of_measurement: "on"
+#         state: >-
+#           {% if is_state('switch.tyr_celyn_thermostat_2', 'on') %}
+#             1
+#           {% else %}
+#             0
+#           {% endif %}
+  - sensor:
+      - name: nest_hvac
+        unique_id: nest_hvac
+        state: >-
+          {{ state_attr('climate.tyr_celyn', 'hvac_action')}}
+  - sensor:
+      - name: nest_current_temperature
+        unique_id: nest_current_temperature
+        device_class: temperature
+        unit_of_measurement: °C
+        state: >-
+          {{ state_attr('climate.tyr_celyn', 'current_temperature')}}
+  - sensor:
+      - name: nest_set_temperature
+        unique_id: nest_set_temperature
+        device_class: temperature
+        unit_of_measurement: °C
+        state: >-
+          {{ state_attr('climate.tyr_celyn', 'temperature')}}
+  - sensor:
+      - name: tyr_celyn_temperature_external
+        unique_id: tyr_celyn_temperature_external
+        device_class: temperature
+        unit_of_measurement: °C
+        state: >-
+          {{ state_attr('weather.ty_r_celyn', 'temperature')}}
