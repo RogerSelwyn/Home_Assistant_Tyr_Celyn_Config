@@ -29,12 +29,12 @@
             {
               "entity": "weather.ty_r_celyn",
               "name": "TC",
-              "type": "custom:weather-card"
+              "type": "custom:weather-card",
+              "number_of_forecasts": "5"
             },
             {
               "type": "thermostat",
-              "entity": "climate.tyr_celyn",
-              "name": "Read Only"
+              "entity": "climate.tyr_celyn"
             },
             {
               "artwork": "cover",
@@ -169,6 +169,9 @@
                 },
                 {
                   "entity": "sensor.tc_tv_current_power"
+                },
+                {
+                  "entity": "sensor.tc_boiler_current_power"
                 }
               ]
             }
@@ -303,6 +306,9 @@
                       },
                       {
                         "entity_id": "*xbox*"
+                      },
+                      {
+                        "entity_id": "*boiler*"
                       }
                     ],
                     "include": [
@@ -405,6 +411,9 @@
                     "entity_id": "*xbox*"
                   },
                   {
+                    "entity_id": "*boiler*"
+                  },
+                  {
                     "entity_id": "device_tracker.roger*"
                   },
                   {
@@ -417,7 +426,7 @@
                     "entity_id": "device_tracker.cleaner*"
                   },
                   {
-                    "entity_id": "device_tracker.kims_a20s"
+                    "entity_id": "device_tracker.kim_s_a20s"
                   },
                   {
                     "entity_id": "device_tracker.tracey_jane"
@@ -429,9 +438,6 @@
                 "include": [
                   {
                     "entity_id": "binary_sensor.tyrcelyn_presence_all"
-                  },
-                  {
-                    "entity_id": "binary_sensor.tyrcelyn_utility_motion"
                   },
                   {
                     "entity_id": "binary_sensor.tyrcelyn_utility_room_motion"

@@ -1,21 +1,32 @@
-weather:
-  - platform: darksky
-    name: Home
-    api_key: !secret darksky_key
- #  units: uk
-    mode: daily
-    scan_interval: 60
-    latitude: !secret home_latitude
-    longitude: !secret home_longitude
+# weather:
+#   - platform: darksky
+#     name: Home
+#     api_key: !secret darksky_key
+#  #  units: uk
+#     mode: daily
+#     scan_interval: 60
+#     latitude: !secret home_latitude
+#     longitude: !secret home_longitude
 
-  - platform: darksky
-    name: Ty'r Celyn
-    api_key: !secret darksky_key
- #  units: uk
-    mode: daily
-    scan_interval: 60
-    latitude: !secret tc_latitude
-    longitude: !secret tc_longitude
+#   - platform: darksky
+#     name: Ty'r Celyn
+#     api_key: !secret darksky_key
+#  #  units: uk
+#     mode: daily
+#     scan_interval: 60
+#     latitude: !secret tc_latitude
+#     longitude: !secret tc_longitude
+
+# sensor:
+#   - platform: darksky
+#     api_key: !secret darksky_key
+#     forecast:
+#       - 0
+#     hourly_forecast:
+#       - 0
+#       - 1
+#     monitored_conditions:
+#       - cloud_cover
 
 zone:
   - name: The Mews

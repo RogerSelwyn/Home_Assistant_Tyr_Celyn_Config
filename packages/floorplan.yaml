@@ -1,0 +1,44 @@
+template:
+  - sensor:
+      ## Calculates daylight brightness out of 100%
+      - name: tc_sunlight_pct
+        unique_id: tc_sunlight_pct
+        state: >-
+          {%- set elevation = state_attr('sun.sun','elevation') | float %}
+          {% if states.sensor.dark_sky_cloud_coverage.state is defined %}
+              {%- set cloud_coverage = states('sensor.dark_sky_cloud_coverage') | float %}
+          {% else %}
+              {%- set cloud_coverage = 10 | float %}
+          {% endif %}  
+          {%- set cloud_factor = (1 - (0.75 * ( cloud_coverage / 100) ** 3 )) %}
+          {%- set min_elevation = -6 %}
+          {%- set max_elevation = 90 %}
+          {%- set adjusted_elevation = elevation - min_elevation %}
+          {%- set adjusted_elevation = [adjusted_elevation,0] | max %}
+          {%- set adjusted_elevation = [adjusted_elevation,max_elevation - min_elevation] | min %}
+          {%- set adjusted_elevation = adjusted_elevation / (max_elevation - min_elevation) %}
+          {%- set adjusted_elevation = adjusted_elevation %}
+          {%- set adjusted_elevation = adjusted_elevation * 100 %}
+          {%- set brightness = adjusted_elevation * cloud_factor * 1.4 %}
+          {{ brightness | round }}
+        unit_of_measurement: '%'
+
+      - name: tc_sunlight_opacity
+        unique_id: tc_sunlight_opacity
+        state: >-
+          {%- set sunpct = states('sensor.tc_sunlight_pct') | float %}
+          {%- set opacity = sunpct / 100 | float %}
+          {{ opacity }}
+
+      - name: tc_tv_picture
+        unique_id: tc_tv_picture
+        state: >-
+          {% if is_state('media_player.tc_tv', 'on') %}
+            {% if state_attr('media_player.sky_q', 'entity_picture') != None %}
+              {{ state_attr('media_player.sky_q', 'entity_picture') }}
+            {% else %}
+              /local/floorplan/images/tv.jpg
+            {% endif %}
+          {% else %}
+            /local/floorplan/imagestransparent.png
+          {% endif %}  

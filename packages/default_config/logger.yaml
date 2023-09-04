@@ -2,11 +2,11 @@ logger:
   default: warning
   logs:
     NodeRed: debug
-    custom_components.sky_hub: info
+    # custom_components.sky_hub: info
     # pyskyqremote.skyq_hub: debug
-    custom_components.skyq: info
-    pyskyqremote.skyq_remote: info
-    pyskyqhub: info
+    # custom_components.skyq: info
+    # pyskyqremote.skyq_remote: info
+    # pyskyqhub: info
     # custom_components.dlink_hnap: debug
     # homeassistant.components.device_tracker: error
     braviapsk.sony_bravia_psk: critical

@@ -11,14 +11,18 @@ mqtt_discoverystream:
       - sensor.tyrcelyn_bookings_today
       - sensor.tyrcelyn_bookings_tomorrow
       - sensor.tyrcelyn_bookings_total
-#      - binary_sensor.tyrcelyn_utility_motion
       - binary_sensor.tyrcelyn_utility_room_motion
+      - binary_sensor.tyrcelyn_living_room_motion
+      - binary_sensor.tyrcelyn_gable_window
       - binary_sensor.tyrcelyn_tctv
       - binary_sensor.tyrcelyn_booking
       - sensor.tyrcelyn_sky_pin
       - sensor.tc_tv_current_power
-      - sensor.tc_tv_today_energy
-      - sensor.tc_tv_month_energy
+      - sensor.tc_boiler_current_power
+      - sensor.tc_tv_picture
+      - sensor.tc_sunlight_opacity
+      - binary_sensor.ev_charger
+      - sensor.workshop_camera_voltage
       
 homeassistant:
   customize:
