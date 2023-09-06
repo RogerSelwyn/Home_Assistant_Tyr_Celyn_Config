@@ -443,7 +443,7 @@
                     "entity_id": "binary_sensor.tyrcelyn_utility_room_motion"
                   },
                   {
-                    "entity_id": "binary_sensor.tyrcelyn_protect_lr"
+                    "entity_id": "binary_sensor.tyrcelyn_living_room_motion"
                   },
                   {
                     "entity_id": "device_tracker.*"
