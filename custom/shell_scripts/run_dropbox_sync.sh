@@ -2,8 +2,8 @@
 
 # Set Variables
 echo Set Variables
-DROPBOX_UPLOADER=/config/shell_scripts/dropbox_uploader.sh
-BKP_CONFIG=/config/shell_scripts/.dropbox_uploader
+DROPBOX_UPLOADER=/config/custom/shell_scripts/dropbox_uploader.sh
+BKP_CONFIG=/config/custom/shell_scripts/.dropbox_uploader
 BKP_DIR=/backup
 BKP_FOLDER=/tyrcelyn
 

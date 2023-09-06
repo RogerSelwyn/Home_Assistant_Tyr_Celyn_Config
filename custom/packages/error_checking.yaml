@@ -1,6 +1,6 @@
 notify:
   - platform: file
     name: noderedlog
-    filename: logs/noderedlog.csv
+    filename: custom/logs/noderedlog.csv
     timestamp: true
   
